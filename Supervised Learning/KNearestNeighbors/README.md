@@ -1,64 +1,58 @@
-# The Perceptron Algorithm - Machine Learning Model
+# K-Nearest Neighbors (KNN) on Forest Cover Type Dataset
 
-This repository contains the implementation of the **Perceptron** algorithm from scratch. The Perceptron is a simple yet effective linear classifier that is widely used in binary classification tasks.
+This Jupyter notebook demonstrates how to apply the K-Nearest Neighbors (KNN) algorithm to classify the Forest Cover Type dataset. The dataset consists of cartographic variables for forested areas, aiming to predict the type of forest cover.
 
-## Overview
+## Dataset
 
-The notebook `ThePerceptron.ipynb` demonstrates the following:
+- **Dataset Name**: Forest Cover Type Dataset
+- **Description**: This dataset contains tree observations from four areas of the Roosevelt National Forest in Colorado. It includes various cartographic variables such as elevation, aspect, slope, distance to hydrology, soil type, and more.
+- **Target Variable**: Forest cover type (7 different classes)
+- **Data Source**: UCI Machine Learning Repository / Kaggle
 
-1. **Preprocessing the Dataset**: 
-   - Loading and preparing the dataset.
-   - Handling missing data and encoding categorical variables.
-   
-2. **Implementing the Perceptron Model**:
-   - A custom implementation of the Perceptron algorithm.
-   - Training the model with the dataset and making predictions.
+### Features:
+- **Elevation**
+- **Aspect**
+- **Slope**
+- **Distance to Hydrology**
+- **Soil Type**
+- **Hillshade**
+- **Other Cartographic Variables**
 
-3. **Model Evaluation**:
-   - Accuracy calculation for the Perceptron model.
-   - Visualization of the data and model predictions using a scatter plot.
+### Target:
+- **Forest Cover Type** (7 different classes)
 
-## Steps
+## Steps in the Notebook
 
-### 1. Data Preprocessing
+### Step 1: Data Loading
+The dataset is loaded and checked for missing values and any inconsistencies.
 
-- The dataset is loaded and preprocessed, including:
-  - Dropping the target column for features (`X`).
-  - Handling any missing values using mean imputation.
-  - Splitting the data into training and testing sets (80% training, 20% testing).
-  
-### 2. Perceptron Algorithm
+### Step 2: Data Preprocessing
+- **Feature Selection**: We remove the target variable from the feature set.
+- **Train-Test Split**: The dataset is split into training and testing sets (80% training, 20% testing).
+- **Feature Scaling**: Standardization is applied to scale the features, ensuring that all features contribute equally to the distance calculations in KNN.
 
-The Perceptron algorithm is implemented manually in the following steps:
+### Step 3: Model Training
+The K-Nearest Neighbors (KNN) classifier is initialized and trained on the training data. The `k` value is initially set to 5.
 
-- **Step 1**: Initialize weights and bias.
-- **Step 2**: Iterate over the training data and update weights based on prediction errors.
-- **Step 3**: Repeat until convergence or a maximum number of iterations.
+### Step 4: Model Evaluation
+After training the model, predictions are made on the test data, and the performance is evaluated using:
+- **Accuracy Score**
+- **Classification Report** (Precision, Recall, F1-score for each class)
+- **Confusion Matrix** (Visualized using a heatmap)
 
-### 3. Model Training and Evaluation
+## Requirements
 
-- The model is trained using the training set and tested on the test set.
-- The accuracy of the model is calculated by comparing predicted labels with the actual labels in the test set.
-  
-### 4. Visualizing the Results
+- Python 3.x
+- Libraries:
+  - `numpy`
+  - `pandas`
+  - `matplotlib`
+  - `seaborn`
+  - `scikit-learn`
 
-- A scatter plot of two features (`age` and `trestbps`) is generated to visualize the training data and predictions.
-- The plot uses color coding to show the predicted labels (0 or 1) for each data point.
+## How to Run the Notebook
 
-## Results
-
-The Perceptron algorithm achieves an **accuracy of 81.95%** on the test data, indicating a relatively good performance on this dataset.
-
-## Dependencies
-
-To run this notebook, you need the following Python libraries:
-
-- `numpy`
-- `pandas`
-- `matplotlib`
-- `sklearn`
-
-You can install the required libraries using `pip`:
-
-```bash
-pip install numpy pandas matplotlib scikit-learn
+1. Clone this repository to your local machine.
+2. Install the required libraries:
+   ```bash
+   pip install -r requirements.txt
