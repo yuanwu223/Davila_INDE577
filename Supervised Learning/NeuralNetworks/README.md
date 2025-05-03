@@ -54,3 +54,8 @@ You can install the necessary libraries by running:
 
 ```bash
 pip install -r requirements.txt
+
+## Datasets Downloads
+https://drive.google.com/file/d/1DnWlME7uAJAgaI-0mM7YxTZTSCpLr5dN/view?usp=drive_link
+https://drive.google.com/file/d/1bJ_WGEDcEB5AOrQVloVobBk57PPRObrV/view?usp=drive_link
+https://drive.google.com/file/d/1Z9zujgCTekWCmtKA-nVxvotv_VPVC0YV/view?usp=drive_link
