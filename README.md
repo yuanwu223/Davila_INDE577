@@ -55,6 +55,8 @@ Unsupervised learning finds hidden patterns or structures in unlabeled data. Thi
 - This repository is designed for learning and academic exploration.
 - Best viewed on GitHub or in Jupyter environments with full rendering support.
 
+---
+
 ## 📄 License
 
 This repository is licensed under the MIT License.
